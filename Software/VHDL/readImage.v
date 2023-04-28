@@ -45,9 +45,11 @@ module readImage
     genvar i;
     // creates new hardware instances 
     generate
-        for(i = 0;i<16;i = i+1) begin
-            wire [7:0] in = image[i];
-            test t (in,b1[i]);
+        for(i = 0;i<16;i = i+8) begin
+            wire [63:0] in = {image[i+7],image[i+6],image[i+5],image[i+4],image[i+3],image[i+2],image[i+1],image[i]};
+            //wire [1:0] temp;
+            test t (in,b1[i+8:i]);
+            //b1[i+1]
         end
     endgenerate
 endmodule
