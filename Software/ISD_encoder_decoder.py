@@ -39,7 +39,7 @@ def Encode(src, message, dest,password):
 
         with open('stego.hex','w') as myfile:
             for i in array:
-                np.savetxt(myfile,i)
+                np.savetxt(myfile,i,fmt='%X')
         print('Array exported to files')
 
         array=array.reshape(height, width, n)
