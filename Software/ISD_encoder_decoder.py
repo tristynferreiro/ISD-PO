@@ -1,5 +1,5 @@
 """
-	Image Stegnography Encoder using the LSB algorithm. Code taken from https://github.com/djrobin17/image-stego-tool
+	Image Steganography Encoder using the LSB algorithm. Code taken from https://github.com/djrobin17/image-stego-tool
 """
 #import libraries
 import sys
@@ -36,6 +36,11 @@ def Encode(src, message, dest,password):
                 if index < req_pixels:
                     array[p][q] = int(bin(array[p][q])[2:9] + b_message[index], 2)
                     index += 1
+
+        with open('stego.hex','w') as myfile:
+            for i in array:
+                np.savetxt(myfile,i)
+        print('Array exported to files')
 
         array=array.reshape(height, width, n)
         enc_img = Image.fromarray(array.astype('uint8'), img.mode)
