@@ -21,11 +21,12 @@
 
 
 module read_Testbench;
+    parameter numBytes = 200;
     reg clk;
     reg start;
-    wire [200-1:0] b1;
+    wire [numBytes-1:0] b1;
     
-    readImage read (.clk(clk),.start(start),.b1(b1));//,b2[0],b3[0],b4[0],b5[0],b6[0],b7[0],b8[0]);
+    readImage #(.numBytes(numBytes))read (.clk(clk),.start(start),.b1(b1));//,b2[0],b3[0],b4[0],b5[0],b6[0],b7[0],b8[0]);
 //    initial begin
 //    $monitor("%d %d",$realtime);
 //    end
