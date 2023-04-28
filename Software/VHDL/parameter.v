@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 28.04.2023 11:14:18
+// Create Date: 27.04.2023 08:43:31
 // Design Name: 
-// Module Name: test
+// Module Name: parameter
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,6 +20,4 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module test(input [7:0] pixel,output yay);
-    assign yay = pixel[0];
-endmodule
+`define INPUTFILENAME "image.mem"

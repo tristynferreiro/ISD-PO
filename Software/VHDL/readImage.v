@@ -43,6 +43,7 @@ module readImage
     
     
     genvar i;
+    // creates new hardware instances 
     generate
         for(i = 0;i<16;i = i+1) begin
             wire [7:0] in = image[i];
