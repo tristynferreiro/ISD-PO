@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.runs/synth_1'
+HD_PWD='C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

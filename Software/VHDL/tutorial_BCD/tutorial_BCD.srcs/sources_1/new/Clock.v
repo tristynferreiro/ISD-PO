@@ -12,7 +12,7 @@ module WallClock(
 );
 
 	//Add the reset
-    wire reset = SW[8];
+    wire reset = SW[0];
 
 	//Add and debounce the buttons
 	wire MButton;
@@ -33,7 +33,7 @@ module WallClock(
 	// You will need to change some signals depending on you constraints
 	SS_Driver SS_Driver1(
 		CLK100MHZ, reset,
-		SW[7],SW[6],SW[5],SW[4],SW[3], SW[2], SW[1], SW[0], // Use temporary test values before adding hours2, hours1, mins2, mins1
+		SW[8], SW[7], SW[6], SW[5], SW[4], SW[3], SW[2], SW[1], // Use temporary test values before adding hours2, hours1, mins2, mins1
 		SegmentDrivers, SevenSegment
 	);
 	
