@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" modified="2023-05-05T10:00:36.312Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4.1 Safari/605.1.15" etag="ehh-4UtL-Ab8523BAuMy" version="21.2.8" type="device">
+  <diagram name="Page-1" id="N6Q_slvyIGiiIuW-d9xw">
+    <mxGraphModel dx="1372" dy="357" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="g3mMqHRdnuUhVGsEwkL1-47" value="Top Module&lt;br&gt;&lt;font size=&quot;1&quot;&gt;&lt;i&gt;implements the LSB decoder&lt;/i&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="120" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-2" value="LSB_retriever_0" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-3" value="LSB_retriever_n" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.014;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="6le7rDKgrjO4DMV_MONy-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="90" as="sourcePoint" />
+            <mxPoint x="280" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-14" value="encoded_0[63:0]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6le7rDKgrjO4DMV_MONy-4" vertex="1" connectable="0">
+          <mxGeometry x="-0.05" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="377.5" y="152.5" width="5" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="377.5" y="180" width="5" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-11" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="377.5" y="202.5" width="5" height="5" as="geometry" />
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="6le7rDKgrjO4DMV_MONy-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="177.5" as="sourcePoint" />
+            <mxPoint x="200" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-15" value="retrieved_0[7:0]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6le7rDKgrjO4DMV_MONy-12" vertex="1" connectable="0">
+          <mxGeometry x="-0.3121" relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.014;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="231" as="sourcePoint" />
+            <mxPoint x="318" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-17" value="encoded_n[63:0]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6le7rDKgrjO4DMV_MONy-16" vertex="1" connectable="0">
+          <mxGeometry x="-0.05" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-18" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="249.83" as="sourcePoint" />
+            <mxPoint x="200" y="249.83" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-19" value="retrieved_n[7:0]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6le7rDKgrjO4DMV_MONy-18" vertex="1" connectable="0">
+          <mxGeometry x="-0.3121" relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.014;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-20" y="99" as="sourcePoint" />
+            <mxPoint x="80" y="99" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-21" value="clk" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6le7rDKgrjO4DMV_MONy-20" vertex="1" connectable="0">
+          <mxGeometry x="-0.05" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-22" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="160" as="sourcePoint" />
+            <mxPoint x="-20" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-23" value="msg[size-1:0]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="6le7rDKgrjO4DMV_MONy-22" vertex="1" connectable="0">
+          <mxGeometry x="-0.3121" relative="1" as="geometry">
+            <mxPoint x="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-24" value="numBytes" style="endArrow=classic;html=1;rounded=0;entryX=-0.014;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-20" y="130" as="sourcePoint" />
+            <mxPoint x="80" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6le7rDKgrjO4DMV_MONy-28" value="*numBytes is the number of bytes in the 24-bit image" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="290" width="300" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
