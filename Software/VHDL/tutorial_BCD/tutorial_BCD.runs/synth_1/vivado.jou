@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri May 12 20:38:06 2023
-# Process ID: 27516
-# Current directory: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.runs/synth_1
+# Start of session at: Sat May 13 16:08:20 2023
+# Process ID: 16368
+# Current directory: C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.runs/synth_1
 # Command line: vivado.exe -log WallClock.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WallClock.tcl
-# Log file: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.runs/synth_1/WallClock.vds
-# Journal file: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.runs/synth_1\vivado.jou
+# Log file: C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.runs/synth_1/WallClock.vds
+# Journal file: C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source WallClock.tcl -notrace

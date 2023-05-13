@@ -65,10 +65,10 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 2
+  set_param chipscope.maxJobs 1
   set_param xicom.use_bs_reader 1
   open_checkpoint WallClock_routed.dcp
-  set_property webtalk.parent_dir {D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.cache/wt} [current_project]
+  set_property webtalk.parent_dir {C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.cache/wt} [current_project]
   catch { write_mem_info -force WallClock.mmi }
   write_bitstream -force WallClock.bit 
   catch {write_debug_probes -quiet -force WallClock}

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri May 12 20:41:15 2023
-| Host         : LenovoHeather running 64-bit major release  (build 9200)
+| Date         : Sat May 13 16:09:50 2023
+| Host         : DESKTOP-G0OLDMD running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file WallClock_control_sets_placed.rpt
 | Design       : WallClock
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     2 |
-|    Minimum number of control sets                        |     2 |
+| Total control sets                                       |     3 |
+|    Minimum number of control sets                        |     3 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     7 |
+| Unused register locations in slices containing registers |     4 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     2 |
+| Total control sets |     3 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 16              |     3 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              17 |            5 |
+| No           | No                    | No                     |              44 |           12 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              48 |           14 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              16 |            5 |
+| Yes          | Yes                   | No                     |              16 |            7 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,8 +73,9 @@ Table of Contents
 +----------------------+-------------------+------------------+------------------+----------------+
 |     Clock Signal     |   Enable Signal   | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +----------------------+-------------------+------------------+------------------+----------------+
-|  CLK100MHZ_IBUF_BUFG | SS_Driver1/p_0_in | SW_IBUF[8]       |                5 |             16 |
-|  CLK100MHZ_IBUF_BUFG |                   |                  |                5 |             17 |
+|  CLK100MHZ_IBUF_BUFG | SS_Driver1/p_0_in | SW_IBUF[8]       |                7 |             16 |
+|  CLK100MHZ_IBUF_BUFG |                   |                  |               12 |             44 |
+|  CLK100MHZ_IBUF_BUFG | msg[65]_i_1_n_0   |                  |               14 |             54 |
 +----------------------+-------------------+------------------+------------------+----------------+
 
 

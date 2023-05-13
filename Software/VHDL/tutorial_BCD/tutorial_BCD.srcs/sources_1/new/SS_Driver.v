@@ -1,31 +1,43 @@
 module SS_Driver(
     input Clk, Reset,
-    input [3:0] BCD7,BCD6,BCD5,BCD4,BCD3, BCD2, BCD1, BCD0, // Binary-coded decimal input
+    input [47:0] msg, // Binary-coded decimal input
     output reg [7:0] SegmentDrivers, // Digit drivers (active low)
     output reg [7:0] SevenSegment // Segments (active low)
 );
 
 
-// Make use of a subcircuit to decode the BCD to seven-segment (SS)
+// Make ;0]use of a subcircuit to decode the BCD to seven-segment (SS)
 wire [6:0]SS[7:0];
-BCD_Decoder BCD_Decoder0 (BCD0, SS[0]);
-BCD_Decoder BCD_Decoder1 (BCD1, SS[1]);
-BCD_Decoder BCD_Decoder2 (BCD2, SS[2]);
-BCD_Decoder BCD_Decoder3 (BCD3, SS[3]);
-BCD_Decoder BCD_Decoder4 (BCD4, SS[4]);
-BCD_Decoder BCD_Decoder5 (BCD5, SS[5]);
-BCD_Decoder BCD_Decoder6 (BCD6, SS[6]);
-BCD_Decoder BCD_Decoder7 (BCD7, SS[7]);
+//BCD_Decoder BCD_Decoder0 (BCD0, SS[0]);
+//BCD_Decoder BCD_Decoder1 (BCD1, SS[1]);
+//BCD_Decoder BCD_Decoder2 (BCD2, SS[2]);
+//BCD_Decoder BCD_Decoder3 (BCD3, SS[3]);
+//BCD_Decoder BCD_Decoder4 (BCD4, SS[4]);
+//BCD_Decoder BCD_Decoder5 (BCD5, SS[5]);
+//BCD_Decoder BCD_Decoder6 (BCD6, SS[6]);
+//BCD_Decoder BCD_Decoder7 (BCD7, SS[7]);
+
+BCD_Decoder BCD_Decoder0 (msg[5:0], SS[0]);
+BCD_Decoder BCD_Decoder1 (msg[11:6], SS[1]);
+BCD_Decoder BCD_Decoder2 (msg[17:12], SS[2]);
+BCD_Decoder BCD_Decoder3 (msg[23:18], SS[3]);
+BCD_Decoder BCD_Decoder4 (msg[29:24], SS[4]);
+BCD_Decoder BCD_Decoder5 (msg[35:30], SS[5]);
+BCD_Decoder BCD_Decoder6 (msg[41:36], SS[6]);
+BCD_Decoder BCD_Decoder7 (msg[47:42], SS[7]);
 
 
 // Counter to reduce the 100 MHz clock to 762.939 Hz (100 MHz / 2^17)
-reg [16:0]Count;
+reg [16:0]Count1;
+
 
 // Scroll through the digits, switching one on at a time
 always @(posedge Clk) begin
- Count <= Count + 1'b1;
+ Count1 <= Count1 + 1'b1;
+ 
     if ( Reset) SegmentDrivers <= 8'hFE;
- else if(&Count) SegmentDrivers <= {SegmentDrivers[6:0], SegmentDrivers[7]};
+ else if(&Count1) SegmentDrivers <= {SegmentDrivers[6:0], SegmentDrivers[7]};
+ 
 end
 
 //------------------------------------------------------------------------------

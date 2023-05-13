@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1683916684">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1683986896">
   <File Type="PA-TCL" Name="WallClock.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="WallClock_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="WallClock_reports.tcl"/>
@@ -47,7 +47,7 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../../Nexys-A7-100T-Master.xdc">
+    <File Path="$PPRDIR/Nexys-A7-100T-Master.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

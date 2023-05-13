@@ -2,12 +2,12 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri May 12 20:38:06 2023
-# Process ID: 27516
-# Current directory: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.runs/synth_1
+# Start of session at: Sat May 13 16:08:20 2023
+# Process ID: 16368
+# Current directory: C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.runs/synth_1
 # Command line: vivado.exe -log WallClock.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WallClock.tcl
-# Log file: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.runs/synth_1/WallClock.vds
-# Journal file: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.runs/synth_1\vivado.jou
+# Log file: C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.runs/synth_1/WallClock.vds
+# Journal file: C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source WallClock.tcl -notrace
 Command: synth_design -top WallClock -part xc7a100tcsg324-1
@@ -16,18 +16,26 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24196 
+INFO: Helper process launched with PID 13332 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 719.938 ; gain = 179.215
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 692.883 ; gain = 178.043
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'WallClock' [D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/Clock.v:5]
-INFO: [Synth 8-6157] synthesizing module 'SS_Driver' [D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/SS_Driver.v:52]
-INFO: [Synth 8-6157] synthesizing module 'BCD_Decoder' [D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/BCD_Decoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'BCD_Decoder' (1#1) [D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/BCD_Decoder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'SS_Driver' (2#1) [D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/SS_Driver.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'WallClock' (3#1) [D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/Clock.v:5]
+INFO: [Synth 8-6157] synthesizing module 'WallClock' [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/Clock.v:5]
+INFO: [Synth 8-6157] synthesizing module 'SS_Driver' [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/SS_Driver.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BCD_Decoder' [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/BCD_Decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BCD_Decoder' (1#1) [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/BCD_Decoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'SS_Driver' (2#1) [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/SS_Driver.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'WallClock' (3#1) [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.srcs/sources_1/new/Clock.v:5]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[7]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[6]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[5]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[4]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[3]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[2]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[1]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 782.391 ; gain = 241.668
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 756.484 ; gain = 241.645
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -40,59 +48,59 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 782.391 ; gain = 241.668
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 756.484 ; gain = 241.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 782.391 ; gain = 241.668
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 756.484 ; gain = 241.645
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:33]
+Parsing XDC File [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:33]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:34]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'UART_TXD'. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:220]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:220]
+WARNING: [Vivado 12-584] No ports matched 'UART_TXD'. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:220]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:220]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'PS2_CLK'. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:226]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:226]
+WARNING: [Vivado 12-584] No ports matched 'PS2_CLK'. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:226]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:226]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'PS2_DATA'. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:227]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc:227]
+WARNING: [Vivado 12-584] No ports matched 'PS2_DATA'. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:227]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc:227]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/UCT 2023/EEE4120F High Performance Embedded Systems/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/WallClock_propImpl.xdc].
+Finished Parsing XDC File [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/WallClock_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/WallClock_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 884.621 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 871.430 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 884.621 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 871.430 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 884.621 ; gain = 343.898
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 871.430 ; gain = 356.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 884.621 ; gain = 343.898
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 871.430 ; gain = 356.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 884.621 ; gain = 343.898
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 871.430 ; gain = 356.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 884.621 ; gain = 343.898
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 871.430 ; gain = 356.590
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -105,6 +113,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
+	               66 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      7 Bit        Muxes := 1     
@@ -115,6 +124,10 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module WallClock 
+Detailed RTL Component Info : 
++---Registers : 
+	               66 Bit    Registers := 1     
 Module SS_Driver 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -138,8 +151,38 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 WARNING: [Synth 8-3917] design WallClock has port DP driven by constant 1
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[7]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[6]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[5]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[4]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[3]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[2]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[1]
+WARNING: [Synth 8-3331] design WallClock has unconnected port SW[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 884.621 ; gain = 343.898
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 871.430 ; gain = 356.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+--------------------------------------+---------------+----------------+
+|Module Name | RTL Object                           | Depth x Width | Implemented As | 
++------------+--------------------------------------+---------------+----------------+
+|BCD_Decoder | SevenSegment                         | 64x7          | LUT            | 
+|WallClock   | SS_Driver1/BCD_Decoder0/SevenSegment | 64x7          | LUT            | 
+|WallClock   | SS_Driver1/BCD_Decoder1/SevenSegment | 64x7          | LUT            | 
+|WallClock   | SS_Driver1/BCD_Decoder2/SevenSegment | 64x7          | LUT            | 
+|WallClock   | SS_Driver1/BCD_Decoder3/SevenSegment | 64x7          | LUT            | 
+|WallClock   | SS_Driver1/BCD_Decoder4/SevenSegment | 64x7          | LUT            | 
+|WallClock   | SS_Driver1/BCD_Decoder5/SevenSegment | 64x7          | LUT            | 
+|WallClock   | SS_Driver1/BCD_Decoder6/SevenSegment | 64x7          | LUT            | 
+|WallClock   | SS_Driver1/BCD_Decoder7/SevenSegment | 64x7          | LUT            | 
++------------+--------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -151,13 +194,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 884.621 ; gain = 343.898
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 871.430 ; gain = 356.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 896.473 ; gain = 355.750
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 875.664 ; gain = 360.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -169,7 +212,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:30 . Memory (MB): peak = 896.473 ; gain = 355.750
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 875.664 ; gain = 360.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -193,7 +236,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 904.027 ; gain = 363.305
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 883.266 ; gain = 368.426
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -206,7 +249,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 904.027 ; gain = 363.305
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 883.266 ; gain = 368.426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -218,25 +261,39 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 904.027 ; gain = 363.305
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 883.266 ; gain = 368.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 904.027 ; gain = 363.305
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 883.266 ; gain = 368.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 904.027 ; gain = 363.305
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 883.266 ; gain = 368.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 904.027 ; gain = 363.305
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 883.266 ; gain = 368.426
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|WallClock   | msg_reg[23] | 4      | 6     | NO           | NO                 | YES               | 6      | 0       | 
++------------+-------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -253,16 +310,16 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |     5|
-|3     |LUT1   |     1|
-|4     |LUT2   |     1|
-|5     |LUT3   |     1|
-|6     |LUT4   |     6|
-|7     |LUT5   |     3|
-|8     |LUT6   |     5|
-|9     |FDRE   |    18|
+|2     |CARRY4 |    12|
+|3     |LUT1   |     2|
+|4     |LUT3   |     2|
+|5     |LUT4   |    12|
+|6     |LUT5   |     9|
+|7     |LUT6   |    76|
+|8     |SRL16E |     6|
+|9     |FDRE   |    93|
 |10    |FDSE   |     7|
-|11    |IBUF   |    10|
+|11    |IBUF   |     2|
 |12    |OBUF   |    16|
 +------+-------+------+
 
@@ -270,31 +327,31 @@ Report Instance Areas:
 +------+-------------+----------+------+
 |      |Instance     |Module    |Cells |
 +------+-------------+----------+------+
-|1     |top          |          |    74|
-|2     |  SS_Driver1 |SS_Driver |    47|
+|1     |top          |          |   238|
+|2     |  SS_Driver1 |SS_Driver |    68|
 +------+-------------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 904.027 ; gain = 363.305
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 883.266 ; gain = 368.426
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:29 . Memory (MB): peak = 904.027 ; gain = 261.074
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:32 . Memory (MB): peak = 904.027 ; gain = 363.305
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 883.266 ; gain = 253.480
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 883.266 ; gain = 368.426
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 899.922 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-18 Infos, 6 Warnings, 5 Critical Warnings and 0 Errors encountered.
+18 Infos, 22 Warnings, 5 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:41 . Memory (MB): peak = 921.355 ; gain = 626.625
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.355 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 899.922 ; gain = 606.352
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 899.922 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/tutorial_BCD/tutorial_BCD.runs/synth_1/WallClock.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.runs/synth_1/WallClock.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file WallClock_utilization_synth.rpt -pb WallClock_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri May 12 20:38:51 2023...
+INFO: [Common 17-206] Exiting Vivado at Sat May 13 16:08:58 2023...
