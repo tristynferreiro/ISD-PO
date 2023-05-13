@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../tutorial_BCD.srcs/sources_1/new/BCD_Decoder.v" \
+"../../../../tutorial_BCD.srcs/sources_1/new/Clock.v" \
+"../../../../tutorial_BCD.srcs/sources_1/new/SS_Driver.v" \
+"../../../../tutorial_BCD.srcs/sources_1/new/Testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
