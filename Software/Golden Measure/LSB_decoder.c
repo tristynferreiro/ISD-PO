@@ -20,23 +20,26 @@ int main(){
     int lsb[8];
     int count = 0;
 
-    char message [numBits];
+    char message[numBits] = " ";
+    //message[0] = " ";
     // Read the content and print it
     while(fgets(myString, 100, hfile)) {
         // printf("%s",myString);
         sscanf(myString,"%x",(lsb+count));
         *(lsb+count) = *(lsb+count)&1; //get LSB and store that in the array
-        //printf("%d\n",*(lsb+count));
+        printf("%d\n",*(lsb+count));
 
-        if(count==7){
+        if(count==8){
             /* group into characters */ 
             int decimal = 0;
             char character[8];
             decimal = lsb[0]<<7 | lsb[1]<<6 | lsb[2] <<5 | lsb[3] <<4 | lsb[4] <<3 | lsb[5] <<2 | lsb[6] <<1 | lsb[7] ;
-            //printf("\nThe decimal value is: %d\n",decimal);
+            printf("\nThe decimal value is: %d\n",decimal);
             sprintf(character, "%c", decimal);  
             printf("The char is: %s\n",character);
-        
+            if(strcmp(character,"$")==0){ // search for delimiter and stop reading if found
+             break;
+            }
             strcat(message, character); 
         }
         count=count+1;
