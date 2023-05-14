@@ -15,34 +15,31 @@ int main(){
         return 1;
     }
     // Store the content of the file
-    char myString[10];
+    char myString[100];
     //int lsb[numBits];
     int lsb[8];
     int count = 0;
 
     char message [numBits];
     // Read the content and print it
-    while(fgets(myString, 10, hfile)) {
-        //printf("%s",myString);
+    while(fgets(myString, 100, hfile)) {
+        // printf("%s",myString);
         sscanf(myString,"%x",(lsb+count));
         *(lsb+count) = *(lsb+count)&1; //get LSB and store that in the array
         //printf("%d\n",*(lsb+count));
-        count=count+1;
 
-        if(count==8){
+        if(count==7){
             /* group into characters */ 
             int decimal = 0;
             char character[8];
-            decimal = 0;
             decimal = lsb[0]<<7 | lsb[1]<<6 | lsb[2] <<5 | lsb[3] <<4 | lsb[4] <<3 | lsb[5] <<2 | lsb[6] <<1 | lsb[7] ;
             //printf("\nThe decimal value is: %d\n",decimal);
             sprintf(character, "%c", decimal);  
-            //printf("The char is: %s\n",character);
-            if(!strcmp(character,"$")){ // search for delimiter and stop reading if found
-             break;
-            }
+            printf("The char is: %s\n",character);
+        
             strcat(message, character); 
         }
+        count=count+1;
         
     }
     // Close the file
