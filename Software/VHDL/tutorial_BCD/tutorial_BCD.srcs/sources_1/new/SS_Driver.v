@@ -1,6 +1,6 @@
 module SS_Driver(
     input Clk, Reset,
-    input [47:0] msg, // Binary-coded decimal input
+    input [63:0] msg, // Binary-coded decimal input
     output reg [7:0] SegmentDrivers, // Digit drivers (active low)
     output reg [7:0] SevenSegment // Segments (active low)
 );
@@ -17,26 +17,26 @@ wire [6:0]SS[7:0];
 //BCD_Decoder BCD_Decoder6 (BCD6, SS[6]);
 //BCD_Decoder BCD_Decoder7 (BCD7, SS[7]);
 
-BCD_Decoder BCD_Decoder0 (msg[5:0], SS[0]);
-BCD_Decoder BCD_Decoder1 (msg[11:6], SS[1]);
-BCD_Decoder BCD_Decoder2 (msg[17:12], SS[2]);
-BCD_Decoder BCD_Decoder3 (msg[23:18], SS[3]);
-BCD_Decoder BCD_Decoder4 (msg[29:24], SS[4]);
-BCD_Decoder BCD_Decoder5 (msg[35:30], SS[5]);
-BCD_Decoder BCD_Decoder6 (msg[41:36], SS[6]);
-BCD_Decoder BCD_Decoder7 (msg[47:42], SS[7]);
+BCD_Decoder BCD_Decoder0 (msg[7:0], SS[0]);
+BCD_Decoder BCD_Decoder1 (msg[15:8], SS[1]);
+BCD_Decoder BCD_Decoder2 (msg[23:16], SS[2]);
+BCD_Decoder BCD_Decoder3 (msg[31:24], SS[3]);
+BCD_Decoder BCD_Decoder4 (msg[39:32], SS[4]);
+BCD_Decoder BCD_Decoder5 (msg[47:40], SS[5]);
+BCD_Decoder BCD_Decoder6 (msg[55:48], SS[6]);
+BCD_Decoder BCD_Decoder7 (msg[63:56], SS[7]);
 
 
 // Counter to reduce the 100 MHz clock to 762.939 Hz (100 MHz / 2^17)
-reg [16:0]Count1;
+reg [16:0]Count;
 
 
 // Scroll through the digits, switching one on at a time
 always @(posedge Clk) begin
- Count1 <= Count1 + 1'b1;
+ Count <= Count + 1'b1;
  
     if ( Reset) SegmentDrivers <= 8'hFE;
- else if(&Count1) SegmentDrivers <= {SegmentDrivers[6:0], SegmentDrivers[7]};
+ else if(&Count) SegmentDrivers <= {SegmentDrivers[6:0], SegmentDrivers[7]};
  
 end
 

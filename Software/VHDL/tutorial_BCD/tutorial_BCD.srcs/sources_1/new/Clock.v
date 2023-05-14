@@ -18,16 +18,11 @@ module WallClock(
 	wire MButton;
 	wire HButton;
 	
-	// Instantiate Debounce modules here
-	
-	// registers for storing the time
-    	reg [3:0]hours1=4'd0;
-	reg [3:0]hours2=4'd0;
-	reg [3:0]mins1=4'd0;
-	reg [3:0]mins2=4'd0;
-	
+	// Instantiate Debounce modules here	
 
-	reg [65:0] msg = {6'd17, 6'd14, 6'd21, 6'd21, 6'd24, 6'd36, 6'd28, 6'd25, 6'd24, 6'd23, 6'd36};
+	// currently the length is hard coded, but if we maybe pass it in as a variable (so number of characters*8 - 1, then we could use it throughout)
+	reg length = 4'd17 * 4'd8 - 1'b1; \\ no. characters * 8 bits/characters - 1
+	reg [length:0] msg = {8'd17, 8'd14, 8'd21, 8'd21, 8'd24, 8'd36, 8'd28, 8'd25, 8'd24, 8'd23, 8'd36, 8'd28, 8'd26, 8'd30, 8'd10, 8'd13, 8'd36};
     
 	//Initialize seven segment
 	wire [7:0] SevenSegment;
@@ -36,7 +31,7 @@ module WallClock(
 	// You will need to change some signals depending on you constraints
 	SS_Driver SS_Driver1(
 		CLK100MHZ, reset,
-		msg[65:65-6*8+1], // Use temporary test values before adding hours2, hours1, mins2, mins1
+		msg[length:length - 4'd8 * 4'd8 + 1'b1], // Use temporary test values before adding hours2, hours1, mins2, mins1
 		SegmentDrivers, SevenSegment
 	);
 	
@@ -44,11 +39,13 @@ module WallClock(
 	assign DP = SevenSegment[7];
 	assign AN = SegmentDrivers;
 	
-	reg [26:0] Count2;
+	// Counter to reduce the 100 MHz clock to 0.745 Hz (100 MHz / 2^27)
+	reg [26:0] Count;
 	
 	//The main logic
 	always @(posedge CLK100MHZ) begin
-	Count2 <= Count2 + 1'b1;
-	if(&Count2) msg <= {msg[59:0], msg[65:60]};
+		Count2 <= Count + 1'b1;
+		// Every second, move the left most digit to the end of the message array
+		if(&Count) msg <= {msg[length - 4'd8:0], msg[length:length - 4'd7]};
 	end
 endmodule  
