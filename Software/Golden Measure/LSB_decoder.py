@@ -1,5 +1,6 @@
 # imports - reading in hex file
 from intelhex import IntelHex
+import time
 
 # takes in list of bytes and converts to string of characters
 def binary_to_string(bits):
@@ -9,6 +10,8 @@ def main():
     # variables
     lsbs_combined = ''
     out = ''
+
+    start = time.perf_counter()
 
     # open file with hex values
     f = open("stego-1.hex", "r")
@@ -39,7 +42,10 @@ def main():
     # save output to txt
     with open('PY_message.txt', 'w') as f:
         f.write(out)
-        print("saved to PY_message.txt")
+        print("saved to PY_message.txt \n")
 
+    end = time.perf_counter()
+
+    print(f"Decoded the message and saved to text file in {end - start:0.4f} seconds\n")
 if __name__ == "__main__":
     main()
