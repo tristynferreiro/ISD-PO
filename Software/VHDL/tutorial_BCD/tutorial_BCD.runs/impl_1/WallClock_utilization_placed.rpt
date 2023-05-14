@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat May 13 16:09:50 2023
+| Date         : Sun May 14 10:27:27 2023
 | Host         : DESKTOP-G0OLDMD running 64-bit major release  (build 9200)
 | Command      : report_utilization -file WallClock_utilization_placed.rpt -pb WallClock_utilization_placed.pb
 | Design       : WallClock
@@ -69,9 +69,9 @@ Table of Contents
 +--------------------------------------------+------+-------+-----------+-------+
 |                  Site Type                 | Used | Fixed | Available | Util% |
 +--------------------------------------------+------+-------+-----------+-------+
-| Slice                                      |   48 |     0 |     15850 |  0.30 |
-|   SLICEL                                   |   35 |     0 |           |       |
-|   SLICEM                                   |   13 |     0 |           |       |
+| Slice                                      |   50 |     0 |     15850 |  0.32 |
+|   SLICEL                                   |   31 |     0 |           |       |
+|   SLICEM                                   |   19 |     0 |           |       |
 | LUT as Logic                               |   99 |     0 |     63400 |  0.16 |
 |   using O5 output only                     |    0 |       |           |       |
 |   using O6 output only                     |   97 |       |           |       |
@@ -83,10 +83,10 @@ Table of Contents
 |     using O6 output only                   |    2 |       |           |       |
 |     using O5 and O6                        |    2 |       |           |       |
 | Slice Registers                            |  108 |     0 |    126800 |  0.09 |
-|   Register driven from within the Slice    |   54 |       |           |       |
-|   Register driven from outside the Slice   |   54 |       |           |       |
-|     LUT in front of the register is unused |    8 |       |           |       |
-|     LUT in front of the register is used   |   46 |       |           |       |
+|   Register driven from within the Slice    |   57 |       |           |       |
+|   Register driven from outside the Slice   |   51 |       |           |       |
+|     LUT in front of the register is unused |    7 |       |           |       |
+|     LUT in front of the register is used   |   44 |       |           |       |
 | Unique Control Sets                        |    3 |       |     15850 |  0.02 |
 +--------------------------------------------+------+-------+-----------+-------+
 * Note: Available Control Sets calculated as Slice Registers / 8, Review the Control Sets Report for more information regarding control sets.

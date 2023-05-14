@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Sat May 13 16:09:50 2023
+| Date         : Sun May 14 10:27:27 2023
 | Host         : DESKTOP-G0OLDMD running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file WallClock_control_sets_placed.rpt
 | Design       : WallClock
@@ -63,7 +63,7 @@ Table of Contents
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |              48 |           14 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              16 |            7 |
+| Yes          | Yes                   | No                     |              16 |           11 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +----------------------+-------------------+------------------+------------------+----------------+
 |     Clock Signal     |   Enable Signal   | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +----------------------+-------------------+------------------+------------------+----------------+
-|  CLK100MHZ_IBUF_BUFG | SS_Driver1/p_0_in | SW_IBUF[8]       |                7 |             16 |
+|  CLK100MHZ_IBUF_BUFG | SS_Driver1/p_0_in | SW_IBUF[8]       |               11 |             16 |
 |  CLK100MHZ_IBUF_BUFG |                   |                  |               12 |             44 |
-|  CLK100MHZ_IBUF_BUFG | msg[65]_i_1_n_0   |                  |               14 |             54 |
+|  CLK100MHZ_IBUF_BUFG | msg[133]_i_1_n_0  |                  |               14 |             54 |
 +----------------------+-------------------+------------------+------------------+----------------+
 
 

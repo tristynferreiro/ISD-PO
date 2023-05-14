@@ -12,7 +12,7 @@ module WallClock(
 );
 
 	//Add the reset
-    wire reset = SW[8];
+    wire reset = SW[0];
 
 	//Add and debounce the buttons
 	wire MButton;
@@ -20,8 +20,10 @@ module WallClock(
 	
 	// Instantiate Debounce modules here	
 
-	// currently the length is hard coded, but if we maybe pass it in as a variable (so number of characters*8 - 1, then we could use it throughout)
-	reg length = 4'd17 * 4'd8 - 1'b1; \\ no. characters * 8 bits/characters - 1
+	
+	parameter length = 8'd17 * 8'd8 - 1'b1; // no. characters * 8 bits/characters - 1
+	
+	// Currently just choosing the values myself, but we should ideally have the values in BCD_Decoder correspond to the values that we encode
 	reg [length:0] msg = {8'd17, 8'd14, 8'd21, 8'd21, 8'd24, 8'd36, 8'd28, 8'd25, 8'd24, 8'd23, 8'd36, 8'd28, 8'd26, 8'd30, 8'd10, 8'd13, 8'd36};
     
 	//Initialize seven segment
@@ -44,7 +46,7 @@ module WallClock(
 	
 	//The main logic
 	always @(posedge CLK100MHZ) begin
-		Count2 <= Count + 1'b1;
+		Count <= Count + 1'b1;
 		// Every second, move the left most digit to the end of the message array
 		if(&Count) msg <= {msg[length - 4'd8:0], msg[length:length - 4'd7]};
 	end
