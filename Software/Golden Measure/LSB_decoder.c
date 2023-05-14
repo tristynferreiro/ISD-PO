@@ -1,78 +1,78 @@
 #include <stdio.h>
 #include <string.h>
+ #include <time.h>
 
-int numBytes = 10;
+int numBytes = 150000;
 
 int main(){
+    /*********Timing************/
+    clock_t start, end;
+    double cpu_time_used;
+    /***************************/
+    
+    start = clock(); // START TIMING
+
     int numBits = 8*numBytes;
     /* READ IN THE CONTENTS OF THE .hex FILE*/
     FILE *hfile;
     // Open a file in read mode
-    hfile = fopen("stego.hex", "r");
+    hfile = fopen("stego-1.hex", "r");
     // Print some text if the file does not exist
     if(hfile == NULL) {
         printf("Not able to open the file.");
         return 1;
     }
     // Store the content of the file
-    char myString[100];
-    //int lsb[numBits];
+    char myString[1000];
+    char message[numBits];
     int lsb[8];
     int count = 0;
 
-    char message[numBits] = " ";
-    //message[0] = " ";
     // Read the content and print it
-    while(fgets(myString, 100, hfile)) {
-        // printf("%s",myString);
+    while(fgets(myString, 1000, hfile)) {
+        //printf("%s",myString);
         sscanf(myString,"%x",(lsb+count));
         *(lsb+count) = *(lsb+count)&1; //get LSB and store that in the array
-        printf("%d\n",*(lsb+count));
+        //printf("%d\n",*(lsb+count));
 
         if(count==8){
             /* group into characters */ 
             int decimal = 0;
-            char character[8];
+            //char character[8];
+            char character;
             decimal = lsb[0]<<7 | lsb[1]<<6 | lsb[2] <<5 | lsb[3] <<4 | lsb[4] <<3 | lsb[5] <<2 | lsb[6] <<1 | lsb[7] ;
-            printf("\nThe decimal value is: %d\n",decimal);
-            sprintf(character, "%c", decimal);  
-            printf("The char is: %s\n",character);
-            if(strcmp(character,"$")==0){ // search for delimiter and stop reading if found
-             break;
+            //printf("\nThe decimal value is: %d\n",decimal);
+            character = (char) decimal;
+            //printf("The char is: %c\n",character);
+
+            /******** (might need to remove this to be fair towards the FPGA) **********/
+            if(character=='$'){ // search for delimiter and stop reading if found 
+                break;
             }
-            strcat(message, character); 
+            /*****************************************************************************/
+
+            sprintf(message, "%s%c", message, character);  
+            count = 0;
         }
         count=count+1;
-        
     }
+
     // Close the file
     fclose(hfile);
 
-    // /* group into characters */ 
-    // int decimal = 0;
-    // char character[8];
-    // char message [numBits];
-    // for (int i =0; i<numBits; i+=8){
-    //     // get decimal value from bits
-    //     decimal = 0;
-    //     decimal = lsb[i+0]<<7 | lsb[i+1]<<6 | lsb[i+2] <<5 | lsb[i+3] <<4 | lsb[i+4] <<3 | lsb[i+5] <<2 | lsb[i+6] <<1 | lsb[i+7] ;
-    //     //printf("\nThe decimal value is: %d\n",decimal);
-    //     sprintf(character, "%c", decimal);  
-    //     //printf("The char is: %s\n",character);
-    //     if(!strcmp(character,"$")){ // search for delimiter
-    //          break;
-    //     }
-    //     strcat(message, character); 
-    //     printf("The char is: %s\n",message);
-    // }
-    // printf("The message is: %s\n",message);
-    
-    hfile = fopen("message.txt","w");
-    if(hfile == NULL) {
+    FILE *hfile2;
+    hfile2 = fopen("c_message.txt","w");
+    if(hfile2 == NULL) {
         printf("Not able to open the output file.");
         return 1;
     }
-    fputs(message,hfile);
-    fclose(hfile);
+
+    fputs(message,hfile2);
+    fclose(hfile2);
+    /*********Timing************/
+    end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("Time %f seconds",cpu_time_used);
+    /***************************/
     
 }
