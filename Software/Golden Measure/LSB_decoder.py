@@ -34,7 +34,12 @@ def main():
     out = out.split("$")[0]
 
     # output message
-    print(out)
+    print(out+"\n")
+
+    # save output to txt
+    with open('PY_message.txt', 'w') as f:
+        f.write(out)
+        print("saved to PY_message.txt")
 
 if __name__ == "__main__":
     main()
