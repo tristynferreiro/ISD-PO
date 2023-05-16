@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../YODA_module_read.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../YODA_module_read.srcs/sources_1/new/extract_Character.v" \
+"../../../../YODA_module_read.srcs/sources_1/new/readImage.v" \
+"../../../../YODA_module_read.srcs/sources_1/new/read_Testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
