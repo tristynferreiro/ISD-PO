@@ -34,8 +34,7 @@ def convert(src, dest):
         myfile.write("memory_initialization_radix = 16;")
         myfile.write("\nmemory_initialization_vector=")
         for i in array:
-            myfile.write(hex(i))
-            myfile.write(",")
+            myfile.write("%X,"%i)
         myfile.write(";")
     
             
