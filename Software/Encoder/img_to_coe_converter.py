@@ -28,7 +28,7 @@ def convert(src, dest):
             np.savetxt(myfile,i,fmt='%X')
 
     dest_coe_name = dest.split(".")
-    dest_coe = dest_coe_name + ".coe"
+    dest_coe = dest_coe_name[0] + ".coe"
     line_counter = 0
     with open(dest_coe,'w') as myfile:
         myfile.write("memory_initialization_radix = 16;")
