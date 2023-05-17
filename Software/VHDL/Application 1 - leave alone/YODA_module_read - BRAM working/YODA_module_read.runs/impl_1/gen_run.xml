@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1684240998">
-  <File Type="PA-TCL" Name="read_Testbench.tcl"/>
   <File Type="BITSTR-BMM" Name="read_Testbench_bd.bmm"/>
-  <File Type="REPORTS-TCL" Name="read_Testbench_reports.tcl"/>
+  <File Type="PA-TCL" Name="read_Testbench.tcl"/>
   <File Type="OPT-DCP" Name="read_Testbench_opt.dcp"/>
+  <File Type="REPORTS-TCL" Name="read_Testbench_reports.tcl"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="read_Testbench_incremental_reuse_pre_placed.rpt"/>
   <File Type="OPT-DRC" Name="read_Testbench_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="read_Testbench.hwdef"/>
   <File Type="PWROPT-DCP" Name="read_Testbench_pwropt.dcp"/>
   <File Type="PLACE-DCP" Name="read_Testbench_placed.dcp"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="read_Testbench_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="read_Testbench.bgn"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="read_Testbench_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="read_Testbench.bin"/>

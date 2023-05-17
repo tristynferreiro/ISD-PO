@@ -8,14 +8,6 @@ module SS_Driver(
 
 // Make ;0]use of a subcircuit to decode the BCD to seven-segment (SS)
 wire [6:0]SS[7:0];
-//BCD_Decoder BCD_Decoder0 (BCD0, SS[0]);
-//BCD_Decoder BCD_Decoder1 (BCD1, SS[1]);
-//BCD_Decoder BCD_Decoder2 (BCD2, SS[2]);
-//BCD_Decoder BCD_Decoder3 (BCD3, SS[3]);
-//BCD_Decoder BCD_Decoder4 (BCD4, SS[4]);
-//BCD_Decoder BCD_Decoder5 (BCD5, SS[5]);
-//BCD_Decoder BCD_Decoder6 (BCD6, SS[6]);
-//BCD_Decoder BCD_Decoder7 (BCD7, SS[7]);
 
 BCD_Decoder BCD_Decoder0 (msg[7:0], SS[0]);
 BCD_Decoder BCD_Decoder1 (msg[15:8], SS[1]);

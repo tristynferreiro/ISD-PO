@@ -19,7 +19,6 @@ module WallClock(
 	wire HButton;
 	
 	// Instantiate Debounce modules here	
-
 	
 	parameter length = 8'd14 * 8'd8 - 1'b1; // no. characters * 8 bits/characters - 1
 	
@@ -30,10 +29,10 @@ module WallClock(
 	wire [7:0] SevenSegment;
 	wire [7:0] SegmentDrivers;
 	
-	// You will need to change some signals depending on you constraints
+
 	SS_Driver SS_Driver1(
 		CLK100MHZ, reset,
-		msg[length:length - 4'd8 * 4'd8 + 1'b1], // Use temporary test values before adding hours2, hours1, mins2, mins1
+		msg[length:length - 4'd8 * 4'd8 + 1'b1],
 		SegmentDrivers, SevenSegment
 	);
 	
@@ -44,7 +43,6 @@ module WallClock(
 	// Counter to reduce the 100 MHz clock to 0.745 Hz (100 MHz / 2^27)
 	reg [26:0] Count;
 	
-	//The main logic
 	always @(posedge CLK100MHZ) begin
 		Count <= Count + 1'b1;
 		// Every second, move the left most digit to the end of the message array

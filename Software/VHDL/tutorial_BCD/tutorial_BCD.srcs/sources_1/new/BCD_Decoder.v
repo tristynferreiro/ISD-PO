@@ -1,5 +1,5 @@
 module BCD_Decoder(
-    input [5:0]BCD,
+    input [7:0]BCD,
     output reg [6:0]SevenSegment
 );
 //------------------------------------------------------------------------------
