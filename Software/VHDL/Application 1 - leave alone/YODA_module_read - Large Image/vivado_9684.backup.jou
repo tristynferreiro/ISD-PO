@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May 16 15:01:45 2023
+# Process ID: 9684
+# Current directory: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/ReadImage/YODA_module_read - BRAM working - Copy
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13332 D:\UCT 2023\EEE4120F High Performance Embedded Systems\YODA\ReadImage\YODA_module_read - BRAM working - Copy\YODA_module_read.xpr
+# Log file: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/ReadImage/YODA_module_read - BRAM working - Copy/vivado.log
+# Journal file: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/ReadImage/YODA_module_read - BRAM working - Copy\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/ReadImage/YODA_module_read - BRAM working - Copy/YODA_module_read.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source read_Testbench.tcl
+close_sim
+close_project
+open_project {D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/ReadImage/YODA_module_read/YODA_module_read.xpr}
+update_compile_order -fileset sources_1

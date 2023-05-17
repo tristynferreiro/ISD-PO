@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May 16 14:43:27 2023
+# Process ID: 2484
+# Current directory: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/ReadImage/YODA_module_read/YODA_module_read.runs/impl_1
+# Command line: vivado.exe -log read_Testbench.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source read_Testbench.tcl -notrace
+# Log file: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/ReadImage/YODA_module_read/YODA_module_read.runs/impl_1/read_Testbench.vdi
+# Journal file: D:/UCT 2023/EEE4120F High Performance Embedded Systems/YODA/ReadImage/YODA_module_read/YODA_module_read.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source read_Testbench.tcl -notrace
