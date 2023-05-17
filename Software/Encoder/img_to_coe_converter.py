@@ -19,22 +19,28 @@ def convert(src, dest):
         n = 3
     elif img.mode == 'RGBA':
         n = 4
+    elif img.mode == 'L':
+        n = 1
 
     total_pixels = array.size//n
-
    
     with open(dest,'w') as myfile:
         for i in array:
             np.savetxt(myfile,i,fmt='%X')
 
     dest_coe_name = dest.split(".")
-    dest_coe = dest_coe_name[0] + ".coe"
-    line_counter = 0
+    dest_coe = dest_coe_name[0] + "." + dest_coe_name[1] + ".coe"
+    print(dest_coe)
+    counter = 0
     with open(dest_coe,'w') as myfile:
         myfile.write("memory_initialization_radix = 16;")
         myfile.write("\nmemory_initialization_vector=")
         for i in array:
-            myfile.write("%X,"%i)
+            for j in i:
+                myfile.write("%X"%j)
+                if(counter<len(array)-1):
+                    myfile.write(",")
+            counter = counter + 1
         myfile.write(";")
     
             
