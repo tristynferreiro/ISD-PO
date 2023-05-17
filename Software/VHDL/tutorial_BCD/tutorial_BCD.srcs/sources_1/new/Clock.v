@@ -21,10 +21,10 @@ module WallClock(
 	// Instantiate Debounce modules here	
 
 	
-	parameter length = 8'd17 * 8'd8 - 1'b1; // no. characters * 8 bits/characters - 1
+	parameter length = 8'd14 * 8'd8 - 1'b1; // no. characters * 8 bits/characters - 1
 	
 	// Currently just choosing the values myself, but we should ideally have the values in BCD_Decoder correspond to the values that we encode
-	reg [length:0] msg = {8'd17, 8'd14, 8'd21, 8'd21, 8'd24, 8'd36, 8'd28, 8'd25, 8'd24, 8'd23, 8'd36, 8'd28, 8'd26, 8'd30, 8'd10, 8'd13, 8'd36};
+	reg [length:0] msg = {8'd12, 8'd37, 8'd3, 8'd25, 8'd0, 8'd36, 8'd18, 8'd28, 8'd36, 8'd12, 8'd24, 8'd24, 8'd21, 8'd36};
     
 	//Initialize seven segment
 	wire [7:0] SevenSegment;

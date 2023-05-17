@@ -2,16 +2,19 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed May 17 09:36:25 2023
-# Process ID: 16524
+# Start of session at: Sun May 14 10:18:57 2023
+# Process ID: 14260
 # Current directory: C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8816 C:\Users\sarah\Documents\1. UNIVERSITY\University\EEE4120F\ISD-PO\Software\VHDL\tutorial_BCD\tutorial_BCD.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13920 C:\Users\sarah\Documents\1. UNIVERSITY\University\EEE4120F\ISD-PO\Software\VHDL\tutorial_BCD\tutorial_BCD.xpr
 # Log file: C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/vivado.log
 # Journal file: C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/sarah/Documents/1. UNIVERSITY/University/EEE4120F/ISD-PO/Software/VHDL/tutorial_BCD/tutorial_BCD.xpr}
 update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
