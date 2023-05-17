@@ -16,7 +16,7 @@ int main(){
     /* READ IN THE CONTENTS OF THE .hex FILE*/
     FILE *hfile;
     // Open a file in read mode
-    hfile = fopen("stego-1.hex", "r");
+    hfile = fopen("stego_16_32.hex", "r");
     // Print some text if the file does not exist
     if(hfile == NULL) {
         printf("Not able to open the file.");

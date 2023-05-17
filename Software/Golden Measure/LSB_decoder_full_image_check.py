@@ -7,16 +7,16 @@ def binary_to_string(bits):
     return ''.join([chr(int(i, 2)) for i in bits])
 
 # LSB Decoder
-def LSB_decoder():
+def LSB_decoder_full_image_check():
     # variables
     lsbs_combined = ''
     out = ''
 
     # start performance timing
-    # start = time.perf_counter()
+    start = time.perf_counter()
 
     # open file with hex values
-    f = open("stego-1.hex", "r")
+    f = open("stego_16_32.hex", "r")
 
     # loop through each line of hex file
     for line in f:
@@ -38,8 +38,11 @@ def LSB_decoder():
     # split actual output from rest of lsbs 
     out = out.split("$")[0]
 
+    # end performance timing
+    end = time.perf_counter()
+
     # output message
-    # print(out+"\n")
+    #print(out+"\n")
 
     # save output to txt
     with open('PY_message.txt', 'w') as f:
@@ -51,10 +54,10 @@ def LSB_decoder():
 
     # print timing
     # print(f"Decoded the message and saved to text file in {end - start:0.4f} seconds\n")
-    # print(end - start)
+    print(f"{end - start}")
 
 def main():
-    LSB_decoder()
+    LSB_decoder_full_image_check()
 
 if __name__ == "__main__":
     main()

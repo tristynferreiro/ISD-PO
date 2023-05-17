@@ -20,7 +20,7 @@ def LSB_decoder():
     start = time.perf_counter()
 
     # open file with hex values
-    f = open("stego-1.hex", "r")
+    f = open("stego_16_32.hex", "r")
 
     # loop through each line of hex file
     for line in f:
@@ -63,7 +63,7 @@ def LSB_decoder():
 
     # print timing
     # print(f"Decoded the message and saved to text file in {end - start:0.4f} seconds\n")
-    print(f"{end - start},\n")
+    print(f"{end - start}")
 
 def main():
     LSB_decoder()
