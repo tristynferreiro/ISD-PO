@@ -12,17 +12,8 @@ password = ""
 def convert(src, dest):
 
     img = Image.open(src, 'r')
-    width, height = img.size
+
     array = np.array(list(img.getdata()))
-
-    if img.mode == 'RGB':
-        n = 3
-    elif img.mode == 'RGBA':
-        n = 4
-    elif img.mode == 'L':
-        n = 1
-
-    total_pixels = array.size//n
    
     with open(dest,'w') as myfile:
         for i in array:

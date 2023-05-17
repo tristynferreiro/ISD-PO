@@ -49,6 +49,7 @@ def Encode(src, message, dest,password):
 
 
 #decoding function
+"""
 def Decode(src, password):
 
     img = Image.open(src, 'r')
@@ -83,7 +84,7 @@ def Decode(src, password):
         print("Hidden Message:", hiddenmessage[:-x])
     else:
         print("You entered the wrong password: Please Try Again")
-
+"""
 #main function
 def Stego():
     print("--Welcome to $t3g0--")
