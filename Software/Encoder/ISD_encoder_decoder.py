@@ -37,7 +37,7 @@ def Encode(src, message, dest,password):
                     array[p][q] = int(bin(array[p][q])[2:9] + b_message[index], 2)
                     index += 1
 
-        with open('stego.hex','w') as myfile:
+        with open('stego-1.hex','w') as myfile:
             for i in array:
                 np.savetxt(myfile,i,fmt='%X')
         print('Array exported to files')

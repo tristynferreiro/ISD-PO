@@ -72,7 +72,8 @@ int main(){
     /*********Timing************/
     end = clock();
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-    printf("Time %f seconds",cpu_time_used);
+    //printf("Time %f seconds\n",cpu_time_used);
+    printf("%f\n", cpu_time_used);
     /***************************/
     
 }

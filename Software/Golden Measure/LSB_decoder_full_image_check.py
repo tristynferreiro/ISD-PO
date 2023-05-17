@@ -1,8 +1,6 @@
 # imports - reading in hex file
 from intelhex import IntelHex
 import time
-import binascii
- 
 
 # takes in list of bytes and converts to string of characters
 def binary_to_string(bits):
@@ -12,12 +10,10 @@ def binary_to_string(bits):
 def LSB_decoder():
     # variables
     lsbs_combined = ''
-    character = ''
     out = ''
-    count = 0
 
     # start performance timing
-    start = time.perf_counter()
+    # start = time.perf_counter()
 
     # open file with hex values
     f = open("stego-1.hex", "r")
@@ -27,43 +23,35 @@ def LSB_decoder():
         # convert hex value into binary
         b = bin(int(line, 16)).zfill(8)
 
-        # retrieve and save LSBs
-        LSB = str((b[len(b) - 1]))
-        lsbs_combined = lsbs_combined + LSB
-        #print(lsbs_combined)
+        # retrieve current lsb
+        current_lsb = str(b[len(b) - 1])
 
-        count += 1
+        # combine all lsbs into single string
+        lsbs_combined = lsbs_combined + current_lsb
 
-        if (count == 8):
-            # convert byte into character
-            val = int(lsbs_combined, 2)
-            character = chr(val)
+    # break up lsbs into array of bytes
+    bytes = [lsbs_combined[i:i+8] for i in range(0, len(lsbs_combined), 8)]
 
-            # if character is the delimeter break
-            if (character == '$'):
-                break
-            
-            # save character string
-            out = out + str(character)
+    # convert bytes into characters
+    out = binary_to_string(bytes)
 
-            # reset count and lsbs_combined
-            count = 0
-            lsbs_combined = ''
+    # split actual output from rest of lsbs 
+    out = out.split("$")[0]
 
     # output message
-    #print(out+"\n")
+    # print(out+"\n")
 
     # save output to txt
-    #with open('PY_message.txt', 'w') as f:
-    #    f.write(out)
+    with open('PY_message.txt', 'w') as f:
+        f.write(out)
         # print("Saved to PY_message.txt \n")
 
     # end performance timing
-    end = time.perf_counter()
+    # end = time.perf_counter()
 
     # print timing
     # print(f"Decoded the message and saved to text file in {end - start:0.4f} seconds\n")
-    print(f"{end - start},\n")
+    # print(end - start)
 
 def main():
     LSB_decoder()
