@@ -1,4 +1,11 @@
-# imports - reading in hex file
+"""
+	
+    This program is a Golden Measure for the Image Steganography Detector (ISD). 
+    The program processes every pixel in the image before converting the retrived LSBs to characters. The message is then 
+    split using the delimeter in the retrived message.
+
+"""
+# imports
 from intelhex import IntelHex
 import time
 
@@ -16,7 +23,7 @@ def LSB_decoder_full_image_check():
     start = time.perf_counter()
 
     # open file with hex values
-    f = open("stego_16_32.hex", "r")
+    f = open("stego_2500.hex", "r")
 
     # loop through each line of hex file
     for line in f:
@@ -42,15 +49,12 @@ def LSB_decoder_full_image_check():
     end = time.perf_counter()
 
     # output message
-    #print(out+"\n")
+    print(out+"\n")
 
     # save output to txt
     with open('PY_message.txt', 'w') as f:
         f.write(out)
         # print("Saved to PY_message.txt \n")
-
-    # end performance timing
-    # end = time.perf_counter()
 
     # print timing
     # print(f"Decoded the message and saved to text file in {end - start:0.4f} seconds\n")

@@ -1,5 +1,5 @@
 """
-	image to hex and coe file converter
+	Image to hex and coe file converter
 """
 #import libraries
 import sys

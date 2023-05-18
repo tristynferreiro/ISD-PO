@@ -1,12 +1,14 @@
+"""
+	
+    This program is a Golden Measure for the Image Steganography Detector (ISD). 
+    The program does not process every pixel but processes 8 LSBs at a time until the delimeter is found. It then returns the message and writes it to a text file.
+    The remaining pixels are not processed.
+
+"""
+
 # imports - reading in hex file
 from intelhex import IntelHex
 import time
-import binascii
- 
-
-# takes in list of bytes and converts to string of characters
-def binary_to_string(bits):
-    return ''.join([chr(int(i, 2)) for i in bits])
 
 # LSB Decoder
 def LSB_decoder():
@@ -20,7 +22,7 @@ def LSB_decoder():
     start = time.perf_counter()
 
     # open file with hex values
-    f = open("stego_16_32.hex", "r")
+    f = open("stego_2500.hex", "r")
 
     # loop through each line of hex file
     for line in f:
@@ -30,10 +32,11 @@ def LSB_decoder():
         # retrieve and save LSBs
         LSB = str((b[len(b) - 1]))
         lsbs_combined = lsbs_combined + LSB
-        #print(lsbs_combined)
 
+        # counter tp keep track of number of bits collected
         count += 1
 
+        # once a byte is collected, convert to char
         if (count == 8):
             # convert byte into character
             val = int(lsbs_combined, 2)
@@ -50,16 +53,16 @@ def LSB_decoder():
             count = 0
             lsbs_combined = ''
 
-    # output message
-    #print(out+"\n")
-
-    # save output to txt
-    #with open('PY_message.txt', 'w') as f:
-    #    f.write(out)
-        # print("Saved to PY_message.txt \n")
-
     # end performance timing
     end = time.perf_counter()
+    
+    # output message
+    print(out+"\n")
+
+    # save output to txt
+    with open('PY_message.txt', 'w') as f:
+        f.write(out)
+        print("Saved to PY_message.txt \n")
 
     # print timing
     # print(f"Decoded the message and saved to text file in {end - start:0.4f} seconds\n")
